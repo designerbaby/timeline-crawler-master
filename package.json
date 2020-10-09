@@ -1,0 +1,60 @@
+{
+  "name": "timeline-crawler",
+  "version": "1.0.0",
+  "description": "timeline中需要爬虫的程序",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test npm run eslint && mocha",
+    "eslint": "./node_modules/.bin/eslint .",
+    "dev": "npm run eslint && node ./index.js",
+    "start": "pm2 startOrGracefulReload ecosystem.config.js --update-env"
+  },
+  "author": "liujiana",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "node-xlsx": "^0.15.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "mocha": "^5.1.1",
+    "should": "^13.2.3",
+    "standard": "^12.0.1",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "semi": [
+        2,
+        "always"
+      ],
+      "capitalized-comments": 0,
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ]
+}
